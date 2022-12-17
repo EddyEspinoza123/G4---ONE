@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conducir</title>
+</head>
+<body>
+    
+</body>
+</html>
+<h1>PROGRAMA PARA CALCULAR SI PUEDES O NO CONDUCIR</h1>
+<script>
+// function imprimir(frase){
+    //     document.write(frase)
+    //     saltoline()
+    // }
+    function saltoline(){
+        document.write("<br>")
+        
+    }
+
+    
+    //mostrar si puedes conducir, solo si tiene 18 años o mas
+    var edad = parseInt(prompt("Indique su edad"))
+    var licencia = prompt("¿Tiene licencia de conducir? indique S o N")
+
+    //ciclo 
+    if ((edad >= 18 ) && (licencia == "S")) {
+        document.write("Puedes Conducir")
+    } else{
+        document.write("No puedes conducir")
+    }
+</script>

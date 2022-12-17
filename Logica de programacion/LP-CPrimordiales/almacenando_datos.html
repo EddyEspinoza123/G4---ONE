@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacenando datos</title>
+</head>
+<body>
+    <input type="text">
+    <button>Verificar si acerto con el secreto</button>
+</body>
+</html>
+<script>
+    //var secreto = Math.round(Math.random()*10);
+
+    function aleatorio(){
+        return Math.round(Math.random()*10);
+    }
+
+    function sortearNumero(cantidad){
+
+        var secreto = [];
+        var contador = 1;
+
+        while(contador <= cantidad){
+            var numeroAleatorio = aleatorio();
+            console.log(numeroAleatorio);
+            var encontrado = false
+
+            if(numeroAleatorio != 0){
+                //ciclo for
+                for(var posicion = 0; posicion < secreto.length; posicion++){
+                    if(numeroAleatorio == secreto[posicion]){
+                        encontrado = true;
+                        break;
+                }
+            }
+
+            if(encontrado == false){
+                secreto.push(numeroAleatorio)
+                contador++;
+            }
+
+            }
+   
+        }
+
+        return secreto
+    }
+
+    var secreto = sortearNumero(4);
+    console.log(secreto);
+
+    var input = document.querySelector("input")
+    input.focus();
+
+    function verificar(){
+
+        var encontrado = false;
+
+        for(var posicion = 0; posicion < secreto.length; posicion++){
+
+        if(parseInt(input.value) == secreto[posicion] ){
+            alert("usted acerto")
+            encontrado = true;
+        } 
+    }
+
+    if (encontrado == false){
+
+    alert("usted erro")
+
+    }
+
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button")
+    button.onclick = verificar;
+
+</script>

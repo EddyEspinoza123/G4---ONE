@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO DE SESION</title>
+</head>
+<body>
+    
+</body>
+</html>
+<h1>INGRESE USUARIO Y CONTRASEÑA PARA PODER INGRESAR</h1>
+<script>
+    var user = "alura"
+    var password = "alura321"
+
+    var maxIntento = 3 ; var intActual = 1;
+
+    while (intActual <= maxIntento) {
+        var loggin = prompt("Ingrese su usuario")
+        var password_login = prompt("Ingrese su contraseña")
+
+        if (user == loggin  && password == password_login) {
+            alert("Bienvenido al sistema " + loggin);
+            intActual = maxIntento; 
+        } else {
+            if(intActual == 3 ){
+                alert("Agotaste el número permitido de intentos!")
+            } else {
+                alert("Inicio de sesión inválido. Favor intente de nuevo")
+            }
+        }
+
+        intActual++ ;
+
+    }
+</script>

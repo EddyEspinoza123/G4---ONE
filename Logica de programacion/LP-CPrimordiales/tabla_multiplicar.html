@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+</head>
+<body>
+    
+</body>
+</html>
+<h1>TABLA DE MULTIPLICAR</h1>
+<script>
+    function saltoline(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function imprimir(frase){
+        document.write(frase)
+        saltoline()
+    }
+    var multiplicar = 1
+    //PEDIR NUMERO
+   var num = parseInt(prompt("Ingrese numero a multiplicar"))
+    while (multiplicar <=10) {
+        imprimir(num * multiplicar)
+        multiplicar = multiplicar + 1 ;
+    }
+</script>
